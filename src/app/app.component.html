@@ -1,1 +1,6 @@
-<h2>Welcome to {{ title }}</h2>
+<app-counter [val]="burgers" [name]="'Burger'" (changed)="burgersChanged($event)"></app-counter>
+<app-counter [val]="pizzas" [name]="'Pizza'" (changed)="pizzasChanged($event)"></app-counter>
+
+<b>
+  total items: {{totalItems}}
+</b>

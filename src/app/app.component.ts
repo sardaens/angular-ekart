@@ -6,5 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ekart';
+  burgers = 3;
+  pizzas = 5;
+  totalItems=0;
+
+  constructor() {
+    this.calculateTotalItems();
+  }
+
+  burgersChanged(count: number){
+    this.burgers = count;
+    this.calculateTotalItems();
+  }
+
+  pizzasChanged(count: number){
+    this.pizzas = count;
+    this.calculateTotalItems();
+  }
+
+  calculateTotalItems(){
+    this.totalItems = this.burgers + this.pizzas;
+  }
 }
